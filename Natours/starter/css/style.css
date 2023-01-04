@@ -19,7 +19,8 @@ body {
     padding: 30px;
 }
 
-.header {
+
+.h-container {
     height: 95vh;
     background-image: linear-gradient(to right bottom,
             rgba(126, 213, 111, 0.8),
@@ -45,13 +46,15 @@ body {
 }
 
 .h-text-container {
-    height: 80%;
+    height: 70%;
     /* background-color: bisque; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-transform: uppercase;
+    text-align: center;
+    /* gap: .5rem; */
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -70,7 +73,19 @@ body {
     letter-spacing: 14px;
 }
 
+.h-text-container .btn {
+    margin-top: 2rem;
+}
 
-/* .h-btn {
-    align-self: start;
-} */
+
+.btn {
+    padding: 15px 40px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border-style: none;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
