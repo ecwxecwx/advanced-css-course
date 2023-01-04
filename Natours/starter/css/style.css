@@ -57,6 +57,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-grow: 5;
     
     /* position: absolute;
     top: 50%;
@@ -66,16 +67,25 @@ body {
     /* background-color: bisque;  */
 }
 
+.h-text {
+    width: 100%;
+    font-size: 3rem;
+    letter-spacing: 3rem;
+    padding-left: 3rem;
+
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    
+    /* background-color: green; */
+}
+
 .h-sub {
     /* background-color: pink; */
     font-size: 2rem;
     letter-spacing: 1rem;
-}
-
-.h-text {
-    font-size: 6rem;
-    letter-spacing: 3rem;
-    /* background-color: green; */
+    padding-left: 1rem;
 }
 
 .h-text-container .btn {
