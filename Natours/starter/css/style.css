@@ -49,25 +49,21 @@ body {
 }
 
 .h-text-container {
-    height: 70%;
-    /* background-color: bisque; */
+    height: 65%;
+    text-transform: uppercase;
+    text-align: center;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-transform: uppercase;
-    text-align: center;
-    /* gap: .5rem; */
+    
     /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-}
 
-.h-text {
-    font-size: 6rem;
-    letter-spacing: 3rem;
-    /* background-color: green; */
+    /* background-color: bisque;  */
 }
 
 .h-sub {
@@ -76,10 +72,15 @@ body {
     letter-spacing: 1rem;
 }
 
-.h-text-container .btn {
-    margin-top: 2rem;
+.h-text {
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    /* background-color: green; */
 }
 
+.h-text-container .btn {
+    margin-top: 3rem;
+}
 
 .btn {
     padding: 1.5rem 4rem;
