@@ -13,8 +13,10 @@ Dark green: #28b485
     padding: 0;
 }
 
-html {
-    font-size: 10px;
+html { 
+    font-size: calc(10/16*100%); 
+    /* 10 is what we want, 16 is the default, times 100 to round it to tens */
+    /* font-size: 62.5%; */
 }
 
 body {
