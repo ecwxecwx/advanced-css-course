@@ -1,26 +1,27 @@
-/*
-COLORS:
+$lightgreen: #7ed56f;
+$mediumgreen: #55c57a;
+$darkgreen: #28b485;
 
-Ligh~ green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+$grey: #777;
+$white: #fff;
 
-*/
-
-* { /* "*" means all elems */
+* {
+    /* "*" means all elems */
     box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
-html { /* root */
-    font-size: calc(10/16*100%); 
+:root {
+    /* refers to the html, but has higher specificity */
+    font-size: calc(10/16*100%);
     /* 10 is what we want, 16 is the default, times 100 to round it to tens */
 }
 
-body { /* content u see on the page browser */
+body {
+    /* content u see on the page browser */
     font: 400 1.5rem/1.7 lato, sans-serif;
-    color: #777;
+    color: $grey;
     padding: 3rem;
     box-sizing: border-box;
 }
@@ -36,7 +37,7 @@ body { /* content u see on the page browser */
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     /* background-color: red; */
-    color: #fff;
+    color: $white;
 }
 
 .nav {
@@ -59,7 +60,7 @@ body { /* content u see on the page browser */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -73,13 +74,8 @@ body { /* content u see on the page browser */
     font-size: 3rem;
     letter-spacing: 3rem;
     padding-left: 3rem;
-
-    flex-wrap: wrap;
+    // background-color: green;
     overflow-wrap: break-word;
-    word-wrap: break-word;
-    white-space: normal;
-    
-    /* background-color: green; */
 }
 
 .header__sub {
@@ -89,7 +85,7 @@ body { /* content u see on the page browser */
     padding-left: 1rem;
 }
 
-.textbox .btn {
+.header__textwrapper .btn {
     margin-top: 3rem;
 }
 
@@ -101,6 +97,6 @@ body { /* content u see on the page browser */
 }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
+    background-color: $white;
+    color: $grey;
 }
