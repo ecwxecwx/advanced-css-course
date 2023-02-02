@@ -60,12 +60,12 @@ body {
   padding: 1.5rem 4rem;
   text-transform: uppercase;
   border-radius: 999px;
-  border-style: none; }
+  border-style: none;
+  transition: all .3s; }
   .btn--white {
     background-color: #fff;
     color: #777; }
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    transition: all .3s;
     cursor: pointer; }

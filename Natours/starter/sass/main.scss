@@ -1,3 +1,13 @@
+@import "abstracts/functions"; // Don't need the "_" and ".scss", sass understands
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "pages/home";
+
 $lightgreen: #7ed56f;
 $mediumgreen: #55c57a;
 $darkgreen: #28b485;
@@ -96,10 +106,11 @@ body {
     text-transform: uppercase;
     border-radius: 999px;
     border-style: none;
+    transition: all .3s; // same animation applied on hover in/out
 
     // Nesting btn modifier in a btn block
-    // This is not rlly for/following the html structure cos there's no html modifier elem,
-    // rather it's more for a organisation purpose
+    // This is not rlly for/following the html structure cos there's no modifier html elem,
+    // rather it's more of a organisation purpose
     // Can be applied for psuedo classes
     &--white {
         background-color: $white;
@@ -109,7 +120,7 @@ body {
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 .5rem 1rem rgba(#000,.2);
-        transition: all .3s;
+        
         cursor: pointer;
     }
 }
