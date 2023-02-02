@@ -1,0 +1,116 @@
+$lightgreen: #7ed56f;
+$mediumgreen: #55c57a;
+$darkgreen: #28b485;
+
+$grey: #777;
+$white: #fff;
+
+* {
+    /* "*" means all elems */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* refers to the html, but has higher specificity */
+    font-size: calc(10/16*100%);
+    /* 10 is what we want, 16 is the default, times 100 to round it to tens */
+}
+
+body {
+    /* content u see on the page browser */
+    font: 400 1.5rem/1.7 lato, sans-serif;
+    color: $grey;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 180, 133, 0.8)),
+        url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    /* background-color: red; */
+    color: $white;
+
+    // Nesting for higher specificity
+    .nav {
+        // background-color: blue;
+        padding-top: 2rem;
+        padding-left: 4rem;
+        padding-bottom: 2rem;
+
+        &__logo { // & = parent = .nav
+            height: 3rem;
+        }
+    }
+
+    // Header text
+    &__textwrapper {
+        height: 65%;
+        text-transform: uppercase;
+        text-align: center;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+    
+        /* background-color: bisque;  */
+
+        .header__heading {
+            width: 100%;
+            font-size: 3rem;
+            letter-spacing: 3rem;
+            padding-left: 3rem;
+            // background-color: green;
+            overflow-wrap: break-word;
+        }
+    
+        .header__sub {
+            // background-color: pink;
+            font-size: 2rem;
+            letter-spacing: 1rem;
+            padding-left: 1rem;
+        }
+
+        .btn {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.btn {
+    padding: 1.5rem 4rem;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border-style: none;
+
+    // Nesting btn modifier in a btn block
+    // This is not rlly for/following the html structure cos there's no html modifier elem,
+    // rather it's more for a organisation purpose
+    // Can be applied for psuedo classes
+    &--white {
+        background-color: $white;
+        color: $grey;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 .5rem 1rem rgba(#000,.2);
+        transition: all .3s;
+        cursor: pointer;
+    }
+}
+
