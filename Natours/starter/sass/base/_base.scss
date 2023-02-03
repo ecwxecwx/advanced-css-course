@@ -1,20 +1,15 @@
-* {
-    /* "*" means all elems */
+* { // "*" means all elems, not root
     box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
-:root {
-    /* refers to the html, but has higher specificity */
-    font-size: calc(10/16*100%);
-    /* 10 is what we want, 16 is the default, times 100 to round it to tens */
+:root { // refers to the html, but has higher specificity
+    font-size: calc(10/16*100%); // This defines what 1 rem is
+    // 10 is what we want(easier to count), 16 is the default, times 100 to round it to tens.
+    // Results in percent(62.5%), so it's how many percent from 16px(100%)
 }
 
-body {
-    /* content u see on the page browser */
-    font: 400 1.5rem/1.7 lato, sans-serif;
-    color: $grey;
-    padding: 3rem;
+body { // content u see on the page browser
     box-sizing: border-box;
 }
