@@ -1,0 +1,23 @@
+.btn {
+    padding: 1.5rem 4rem;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border-style: none;
+    transition: all .3s; // same animation applied on hover in/out
+
+    // Nesting btn modifier in a btn block
+    // This is not rlly for/following the html structure cos there's no modifier html elem,
+    // rather it's more of a organisation purpose
+    // Can be applied for psuedo classes
+    &--white {
+        background-color: $white;
+        color: $grey;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 .5rem 1rem rgba(#000,.2);
+        
+        cursor: pointer;
+    }
+}

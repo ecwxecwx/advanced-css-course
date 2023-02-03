@@ -16,6 +16,36 @@ body {
   padding: 3rem;
   box-sizing: border-box; }
 
+.header__textwrapper .header__heading {
+  width: 100%;
+  font-size: 3rem;
+  letter-spacing: 3rem;
+  padding-left: 3rem;
+  overflow-wrap: break-word; }
+
+.header__textwrapper .header__sub {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  padding-left: 1rem; }
+
+* {
+  /* "*" means all elems */
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+:root {
+  /* refers to the html, but has higher specificity */
+  font-size: calc(10/16*100%);
+  /* 10 is what we want, 16 is the default, times 100 to round it to tens */ }
+
+body {
+  /* content u see on the page browser */
+  font: 400 1.5rem/1.7 lato, sans-serif;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);

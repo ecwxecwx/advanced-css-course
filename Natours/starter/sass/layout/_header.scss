@@ -1,0 +1,40 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 180, 133, 0.8)),
+        url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    /* background-color: red; */
+    color: $white;
+
+    // Nesting for higher specificity
+    .nav {
+        // background-color: blue;
+        padding-top: 2rem;
+        padding-left: 4rem;
+        padding-bottom: 2rem;
+
+        &__logo { // & = parent = .nav
+            height: 3rem;
+        }
+    }
+
+    &__textwrapper {
+        height: 65%;
+        text-transform: uppercase;
+        text-align: center;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .btn {
+            margin-top: 3rem;
+        }
+        
+    }
+}
