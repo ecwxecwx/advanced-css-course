@@ -4,3 +4,10 @@ $darkgreen: #28b485;
 
 $grey: #777;
 $white: #fff;
+
+$grid-width: 114rem; // 1140px/10(1rem) 
+$gutter-vertical: 5rem;
+$gutter-horizontal: 2.5rem;
+
+$one-third-grid-width: calc( (100% - 2 * #{$gutter-horizontal}) / 3);
+$one-fourth-grid-width: calc( (100% - 3 * #{$gutter-horizontal}) / 4);

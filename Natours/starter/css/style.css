@@ -1,20 +1,18 @@
 * {
-  /* "*" means all elems */
   box-sizing: inherit;
   margin: 0;
   padding: 0; }
 
 :root {
-  /* refers to the html, but has higher specificity */
-  font-size: calc(10/16*100%);
-  /* 10 is what we want, 16 is the default, times 100 to round it to tens */ }
+  font-size: calc(10/16*100%); }
 
 body {
-  /* content u see on the page browser */
+  box-sizing: border-box; }
+
+body {
   font: 400 1.5rem/1.7 lato, sans-serif;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
+  padding: 3rem; }
 
 .header__textwrapper .header__heading {
   width: 100%;
@@ -27,64 +25,6 @@ body {
   font-size: 2rem;
   letter-spacing: 1rem;
   padding-left: 1rem; }
-
-* {
-  /* "*" means all elems */
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0; }
-
-:root {
-  /* refers to the html, but has higher specificity */
-  font-size: calc(10/16*100%);
-  /* 10 is what we want, 16 is the default, times 100 to round it to tens */ }
-
-body {
-  /* content u see on the page browser */
-  font: 400 1.5rem/1.7 lato, sans-serif;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-position: top;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /* background-color: red; */
-  color: #fff; }
-  .header .nav {
-    padding-top: 2rem;
-    padding-left: 4rem;
-    padding-bottom: 2rem; }
-    .header .nav__logo {
-      height: 3rem; }
-  .header__textwrapper {
-    height: 65%;
-    text-transform: uppercase;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
-    /* background-color: bisque;  */ }
-    .header__textwrapper .header__heading {
-      width: 100%;
-      font-size: 3rem;
-      letter-spacing: 3rem;
-      padding-left: 3rem;
-      overflow-wrap: break-word; }
-    .header__textwrapper .header__sub {
-      font-size: 2rem;
-      letter-spacing: 1rem;
-      padding-left: 1rem; }
-    .header__textwrapper .btn {
-      margin-top: 3rem; }
 
 .btn {
   padding: 1.5rem 4rem;
@@ -99,3 +39,59 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     cursor: pointer; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 5rem; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }
+
+[class^="col-"] {
+  background-color: tomato;
+  float: left; }
+  [class^="col-"]:not(:last-child) {
+    margin-right: 2.5rem; }
+
+.col-1-of-2 {
+  width: calc((100% - 2.5rem) / 2); }
+
+.col-1-of-3 {
+  width: calc( (100% - 2 * 2.5rem) / 3); }
+
+.col-1-of-4 {
+  width: calc( (100% - 3 * 2.5rem) / 4); }
+
+.col-2-of-3 {
+  width: calc(calc( (100% - 2 * 2.5rem) / 3) * 2 + 2.5rem); }
+
+.col-3-of-4 {
+  width: calc(calc( (100% - 3 * 2.5rem) / 4) * 3 + (2 * 2.5rem)); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  color: #fff; }
+  .header .nav {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-bottom: 2rem; }
+    .header .nav__logo {
+      height: 3rem; }
+  .header__textwrapper {
+    height: 65%;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .header__textwrapper .btn {
+      margin-top: 3rem; }
