@@ -25,3 +25,34 @@ body { // content u see on the page browser
         }
     }
 }
+
+.sec-header {
+    letter-spacing: .1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+
+    background: linear-gradient(to right, $lightgreen, $darkgreen);
+    // gradient wont work on bg color cos it beleong to the img data type
+    display: inline-block;
+    -webkit-background-clip: text;
+    // webkit is used to make sure it renders correctly in safari n chrome
+    background-clip: text;
+    color: transparent;
+    // setting it to transparent to clear the text color so it reveals the gradient
+}
+
+.tertiary-header {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+}
+
+.para {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    // the btn is now the last child, it wont take my para as my last child even if i specify it as para
+    // https://stackoverflow.com/questions/18995362/last-child-not-working-as-expected
+}
+

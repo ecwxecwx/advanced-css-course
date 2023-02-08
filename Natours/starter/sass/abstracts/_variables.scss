@@ -1,13 +1,19 @@
+// Colors
 $lightgreen: #7ed56f;
 $mediumgreen: #55c57a;
 $darkgreen: #28b485;
 
 $grey: #777;
+$grey-1: #f7f7f7;
 $white: #fff;
 
+// Font
+$default-font-size: 1.6rem;
+
+// Grid
 $grid-width: 114rem; // 1140px/10(1rem) 
 $gutter-vertical: 5rem;
-$gutter-horizontal: 2.5rem;
+$gutter-horizontal: 5rem;
 
 $one-third-grid-width: calc( (100% - 2 * #{$gutter-horizontal}) / 3);
 $one-fourth-grid-width: calc( (100% - 3 * #{$gutter-horizontal}) / 4);

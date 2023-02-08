@@ -21,3 +21,32 @@
         cursor: pointer;
     }
 }
+
+.sec-btn {
+    &:link, // havent been clicked
+    &:visited { // clicked
+        color: $lightgreen;
+        font-size: $default-font-size;
+        display: inline-block;
+        padding: 3px 5px;
+        text-decoration: none; // remove the underline
+        border-bottom: 1px solid $lightgreen;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $lightgreen;
+        color: $white;
+        box-shadow: 0 1rem 2rem rgba($grey, .25);
+        transform: translateY(-2px);
+    }
+
+    &:active { // the bevahaviour when u click
+        box-shadow: 0 .5rem 1rem rgba($grey, .25);
+        transform: translateY(0px);
+    }
+
+    // following the LVHA order (link > visited > hover > active)
+
+}
+
