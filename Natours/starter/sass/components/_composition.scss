@@ -1,6 +1,6 @@
 .composition {
     // border: 1px solid red;
-    height: 25rem;
+    height: 25rem; // gave it a height if not top wont work on children
     position: relative;
 
     &__photo {

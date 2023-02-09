@@ -29,7 +29,6 @@ body { // content u see on the page browser
 .sec-header {
     letter-spacing: .1rem;
     font-size: 3rem;
-    text-transform: uppercase;
 
     background: linear-gradient(to right, $lightgreen, $darkgreen);
     // gradient wont work on bg color cos it beleong to the img data type
@@ -43,7 +42,6 @@ body { // content u see on the page browser
 
 .tertiary-header {
     font-size: $default-font-size;
-    text-transform: uppercase;
 }
 
 .para {

@@ -1,7 +1,24 @@
 .about {
     background-color: $grey-1;
-    padding: 25rem 0;
+    padding: 25rem 0 30rem; // top, left n right, btm
+    // this gives the 'size'
     margin-top: calc(-1 * (95vh - 75vh));
     // 95 is the height of neader, 75 is the btm right corner of the polygon
     // multiply by -1 to return a neg value
+}
+
+.features {
+    //display: flow-root; // to prevent margin collapse
+    padding: 20rem 0; // this gives the height
+    background-image: linear-gradient(to right bottom,
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 180, 133, 0.8)),
+    url(../img/nat-4.jpg);
+    background-size: cover;
+    transform: skewY(-6deg);
+    margin-top: -8rem;
+
+    & > * { // selects only the direct child = row. if & *, it selects all children which includes the text n icn
+        transform: skewY(6deg);
+    }
 }
