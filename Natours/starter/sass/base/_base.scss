@@ -8,6 +8,10 @@
     font-size: calc(10/16*100%); // This defines what 1 rem is
     // 10 is what we want(easier to count), 16 is the default, times 100 to round it to tens.
     // Results in percent(62.5%), so it's how many percent from 16px(100%)
+    // 1rem = 10px
+    // 1.4rem = 14px
+    // 1.6rem = 16px 
+    // ...
 }
 
 body { // content u see on the page browser
