@@ -1,0 +1,36 @@
+.tour-card {
+    position: relative;
+    perspective: 120rem;
+    -moz-perspective: 120rem;
+    height: 40rem; // needed for pers to work
+
+    &__side {
+        color: #fff;
+        font-size: 2rem;
+
+        position: absolute;
+        width: 100%;
+        height: 40rem;
+        transition: all .8s ease;
+        backface-visibility: hidden;
+
+        &--front {
+            background-color: tomato;
+        }
+
+        &--back {
+            background-color: lightblue;
+            transform: rotateY(-180deg);
+        }
+
+        
+    }
+
+    &:hover &__side--front { // select side to turn when hover on card
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
